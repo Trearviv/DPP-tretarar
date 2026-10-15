@@ -209,3 +209,69 @@ body.leaving :is(main,footer,.hero),body.leaving .modal:target .modal-box{opacit
   .foot{grid-template-columns:1fr;text-align:center}
   .modal-box{width:100%;padding:16px}
 }
+
+
+/* 13. Regional pages — long-form editorial reading layout (no content cards) */
+.regional-article{
+  width:min(100%, 760px);
+  margin:28px auto 12px;
+}
+.article-meta{
+  margin:0 0 10px;
+  color:var(--accent);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+.article-subtitle{
+  margin:0 0 14px;
+  font-size:clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height:1.45;
+  font-weight:700;
+  text-wrap:balance;
+}
+.regional-article p{
+  margin:0 0 1rem;
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.95;
+}
+.regional-article .article-lead{
+  color:var(--text);
+  font-size:clamp(1.02rem, 1.4vw, 1.12rem);
+  line-height:2;
+}
+.dish-story{
+  padding:24px 0 20px;
+  border-top:1px solid var(--line);
+  scroll-margin-top:120px;
+}
+.dish-story h3{
+  margin:0 0 8px;
+  color:var(--text);
+  font-size:1.2rem;
+  line-height:1.55;
+  font-weight:700;
+}
+.dish-story p:last-child{margin-bottom:0}
+.article-links{
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  margin-top:4px;
+}
+.article-links p{margin-bottom:0}
+.article-link{
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.2em;
+}
+.article-link:hover{opacity:.82}
+.article-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:700px){
+  .regional-article{margin-top:22px}
+  .regional-article p{font-size:.98rem;line-height:1.9}
+  .regional-article .article-lead{font-size:1.03rem;line-height:1.9}
+  .dish-story{padding:20px 0 18px}
+}
