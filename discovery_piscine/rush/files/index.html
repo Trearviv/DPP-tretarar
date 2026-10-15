@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="indu.css">
+<style>
+/* ข้อความใหญ่บนพื้นดำ (.yellow = ตัวหนังสือสีเหลือง) */
+.banner{height:1500px;background:#000;padding:50px;display:flex;justify-content:center;align-items:center;font-size:60px;color:#fff}
+.banner.yellow{color:#ffee00}
+.c{text-align:center}
+img.c{display:block;margin:0 auto}
+
+/* Dropdown */
+.dropdown{position:relative;display:inline-block}
+.dropbtn{background:#4CAF50;color:#fff;padding:100px;font-size:18px;border:0;border-radius:4px;cursor:pointer}
+.dropbtn:hover{background:#3e8e41}
+.dropdown-content{display:none;position:absolute;background:#f1f1f1;min-width:200px;box-shadow:0 8px 16px rgba(0,0,0,.2);z-index:10;border-radius:4px;overflow:hidden}
+.dropdown-content a{color:#000;padding:12px 16px;text-decoration:none;display:block}
+.dropdown-content a:hover{background:#ddd}
+.show{display:block!important}   /* เปิดเมนู (JavaScript เติม class นี้) */
+.develop-container{text-align:center;margin:40px 0}
+</style>
+</head>
+<body>
+
+<div class="parallax img12"></div>
+<div class="banner">Welcome to Thai Street Food Guide</div>
+
+<hr size="20" color="yellow">
+
+<h1 class="c">Regions of Thai Food</h1>
+<p class="c">ในประเทศไทยของเรานั้นมีอาหารทั้งหมด4ภูมิภาคมีดังนี้ </p>
+
+<pre class="c">1. Central Thailand</pre>
+<img class="c" src="/home/papiyapi/seve img/กลาง.jpeg" alt="Central Thailand Food">
+<pre class="c">2. Northern Thailand</pre>
+<img class="c" src="/home/papiyapi/seve img/เหนือ.jpeg" alt="Northern Thailand Food">
+<pre class="c">3. Northeastern Thailand</pre>
+<img class="c" src="/home/papiyapi/seve img/อีสาน.jpeg" alt="Northeastern Thailand Food">
+<pre class="c">4. Southern Thailand</pre>
+<img class="c" src="/home/papiyapi/seve img/ใต้.jpeg" alt="Southern Thailand Food">
+
+<hr>
+
+<h1 class="c">Each region has its own unique characteristics, as follows:</h1>
+<pre class="c">1. Central Thailand: Known for its rich and flavorful dishes, often featuring coconut milk and aromatic herbs.</pre>
+<pre class="c">2. Northern Thailand: Famous for its spicy and tangy flavors, with dishes like Khao Soi and Sai Oua.</pre>
+<pre class="c">3. Northeastern Thailand: Known for its bold and spicy flavors, with dishes like Som Tum and Larb.</pre>
+<pre class="c">4. Southern Thailand: Characterized by its use of fresh seafood and strong, spicy flavors, with dishes like</pre>
+
+<div class="parallax img12"></div>
+<div class="banner yellow">let go to thaifood guide</div>
+
+<div class="develop-container">
+  <div class="dropdown">
+    <button onclick="toggleDropdown()" class="dropbtn">Click</button>
+    <div id="myDropdown" class="dropdown-content"><a href="home.html">click</a></div>
+  </div>
+</div>
+
+<script>
+const menu = document.getElementById("myDropdown");
+
+function toggleDropdown() { menu.classList.toggle("show"); }
+
+// คลิกนอกปุ่ม → ปิดเมนู
+window.onclick = e => { if (!e.target.matches(".dropbtn")) menu.classList.remove("show"); };
+</script>
+</body>
+</html>
