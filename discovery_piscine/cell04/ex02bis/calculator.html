@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <main class="calculator">
+        <h1>Calculator</h1>
+        <label for="left-number">First positive integer (0–10)</label>
+        <input id="left-number" type="number" min="0" max="10" step="1">
+
+        <label for="operator">Operation</label>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+            <option value="%">%</option>
+        </select>
+
+        <label for="right-number">Second positive integer (0–10)</label>
+        <input id="right-number" type="number" min="0" max="10" step="1">
+        <button id="calculate" type="button">Try me!</button>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
